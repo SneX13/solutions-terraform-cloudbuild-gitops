@@ -29,8 +29,8 @@ module "vpc" {
   
 module "vm_instance" {
   source  = "../../modules/vm_instance"
-  project = "${var.project}"
-  env     = "${local.env}"
+  network = "${var.vpc.network_name}"
+  num_instances = "${var.num_instances}"
 }
 module "http_server" {
   source  = "../../modules/http_server"
