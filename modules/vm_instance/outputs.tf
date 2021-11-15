@@ -1,4 +1,3 @@
-output "instances_name" {
-  description = "Name for compute instances"
-  value       = "${module.vm_instance.name}"
+output "ip" {
+  value =  "${google_compute_instance.vm_instance.*.network_interface.0.network_ip}"
 }
