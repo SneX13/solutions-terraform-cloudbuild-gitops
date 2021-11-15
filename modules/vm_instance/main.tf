@@ -11,7 +11,7 @@ resource "google_compute_instance" "vm_instance" {
   }
 
   network_interface {
-    network = "${module.vpc.network_name}"
+    network = "${var.network}"
     access_config {
     }
   }
