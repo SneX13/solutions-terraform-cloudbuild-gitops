@@ -29,7 +29,7 @@ module "vpc" {
   
 module "vm_instance" {
   source  = "../../modules/vm_instance"
-  network = "${module.vpc.network_name}"
+  network = "${local.env}"
   num_instances = "${var.num_instances}"
 }
 module "http_server" {
