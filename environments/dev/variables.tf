@@ -14,3 +14,6 @@
 
 
 variable "project" {}
+variable "num_instances" {
+  default = "3"
+}
